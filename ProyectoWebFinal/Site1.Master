@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ProyectoWebFinal.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="Recursos/EstiloPrincipal.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>    
+
+    <title>GARAJE SPORTS</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+    <body id="body1">
+      <form runat="server">
+        <header>
+            <div class="header">
+                <br class="Apple-interchange-newline">
+                    <a href="/Principal/Ingresar" class="logo">Garaje Sport</a>
+       
+                    <div id="MenuUsuario" runat="server">
+                        <ul class="listanav" id="Menus" runat="server"></ul>
+                    </div>
+
+                    <div id="MenuDesple">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <asp:DropDownList ID="ddlMenu" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlMenu_SelectedIndexChanged">
+                            <asp:ListItem Text="" Value="" />
+                            <asp:ListItem Text="MI PERFIL" Value="miPerfil" />
+                            <asp:ListItem Text="CERRAR SESIÓN" Value="cerrarSesion" />
+                        </asp:DropDownList>
+                    </div> 
+
+            </div>
+        </header>
+
+         <section>
+             <asp:ContentPlaceHolder  ID="MainContent" runat="server" />
+         
+             <asp:Literal ID="LiteralMensajeError" runat="server" Visible="false" EnableViewState="false"></asp:Literal>
+
+         </section>
+     
+         <detail>
+             <asp:ContentPlaceHolder ID="DetailContent" runat="server"></asp:ContentPlaceHolder>
+         </detail>
+
+         <footer style="position: relative;">
+             <div style="display: flex;flex-direction: column;align-items: center;border-top: black solid 1px;margin: 25px 25px 10px;padding: 25px 0;">
+             
+                 <h3 style="margin: 0;padding: 0;font-size: 20px;font-weight: bold;">El camino hacia la libertad comienza con el volante en tus manos, alquila el auto de tus sueños y disfruta de la experiencia sin límites.</h3>
+                 <p style="margin: 0; padding: 0;"">&copy; <%: DateTime.Now.Year %> - GARAJE SPORTS </p>
+             </div>
+
+         </footer>
+       </form>
+</body>
+</html>

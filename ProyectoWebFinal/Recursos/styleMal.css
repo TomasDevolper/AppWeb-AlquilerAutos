@@ -1,0 +1,46 @@
+﻿
+.swiper {
+    margin-top: 30px;
+}
+
+.container {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    margin-bottom: 50px;
+    background-color: #FFFFFF;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    height: 420px;
+    width: 295px;
+    position: relative;
+    
+}
+
+.swiper-slide img {
+     width: 295px;
+     border-radius: 15px;
+     height: 420px;
+}
+
+.swiper-txt {
+    position: absolute;
+    padding: 20px;
+}
+
+.swiper-txt h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #222222;
+}
+
+.desktop {
+    text-align: center;
+    z-index: 1;
+}
+
+.desktop img {
+    width: 800px;
+}
